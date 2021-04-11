@@ -23,12 +23,11 @@ console.log(awayTeam2014[0]["Away Team Goals"]);           // returns 0
 
 //(e) Winner of 2014 world cup final */
 
-
 if (awayGoals[0]["Away Team Goals"] > homeGoals[0]["Home Team Goals"]){
     console.log(awayTeam2014[0]["Away Team Name"]);
 } else if (awayGoals[0]["Away Team Goals"] < homeGoals[0]["Home Team Goals"]){
     console.log(homeTeam2014[0]["Home Team Name"]);
-}
+} // returns Germany
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use getFinals to do the following:
@@ -38,10 +37,11 @@ Use getFinals to do the following:
 hint - you should be looking at the stage key inside of the objects
 */
 
-function getFinals(/* code here */) {
-   /* code here */
+function getFinals(data) {
+   let finalTeams = fifaData.filter((data) => data.Stage === "Final")
+   return finalTeams;
 }
-
+console.log(getFinals(fifaData));
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
